@@ -30,7 +30,7 @@ export const login = async (email, password) => {
 export const logout = async () => {
   try {
     const res = await axios({
-      method: 'GET',
+      method: 'PATCH',
       // url: 'http://localhost:3000/api/v1/users/logout'
       url: '/api/v1/users/logout'
     });
