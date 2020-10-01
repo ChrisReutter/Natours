@@ -20,7 +20,7 @@ const viewRouter = require("./routes/viewRoutes");
 // const client = require('./public/js/contentful')
 // console.log(client);
 const app = express();
-
+app.enable('trust proxy');
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
