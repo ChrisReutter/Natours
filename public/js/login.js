@@ -30,11 +30,10 @@ export const login = async (email, password) => {
 export const logout = async () => {
   try {
     const res = await axios({
-      method: 'PATCH',
-      // url: 'http://localhost:3000/api/v1/users/logout'
+      method: 'GET',
       url: '/api/v1/users/logout'
     });
-    if ((res.data.status = 'success')) location.reload(true); {
+    if ((res.data.status = 'success')) {
       showAlert('error', 'Logged Out Successfully!');
       window.setTimeout(() => {
         location.assign('/');
