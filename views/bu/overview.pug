@@ -3,7 +3,7 @@ extends base
 block content
   main.main
     .card-container
-    
+
       each tour in tours
         .card
           .card__header
@@ -39,7 +39,7 @@ block content
               | 
               span.card__footer-text per person
             p.card__ratings
-              span.card__footer-value= tour.ratingsAverage
+              span.card__footer-value= `${tour.ratingsAverage} star rating`
               | 
-              span.card__footer-text= `rating (${tour.ratingsQuantity})`
+              span.card__footer-text= ` from (${tour.ratingsQuantity}) customers`
             a.btn.btn--green.btn--small(href=`/tour/${tour.slug}`) Details
